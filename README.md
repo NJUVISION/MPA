@@ -51,7 +51,7 @@ python examples/train_stage2_seg.py -m mpa --task_idx 2 -a psp -d /path/to/ade20
 
 The training checkpoints will be generated in the "checkpoints" folder at the current directory. You can change the default folder by modifying the function "init()" in "expample/train.py".
 
-For semantic segmentation, please download the checkpoint of PSPNet from [the official repo](https://github.com/hszhao/PSPNet) first, and save it to `checkpoints/pspnet/pspnet_train_epoch_100.pth`.
+For semantic segmentation, please download the checkpoint of PSPNet from [the official repo](https://github.com/hszhao/semseg) first, and save it to `checkpoints/pspnet/pspnet_train_epoch_100.pth`.
 
 
 ## Testing
