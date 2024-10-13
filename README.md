@@ -12,7 +12,7 @@ Image coding for multi-task applications, catering to both human perception and 
 This repository is still under active construction:
 - [x] Release training and testing codes
 - [x] Release pretrained models
-- [ ] Release visualization tools
+- [ ] Release visualization tools (in progress)
 
 
 ## Preparation
@@ -25,7 +25,7 @@ pip install -U pip && pip install -e .
 
 
 ## Pretrained Models
-The trained weights in step 3 (with 4 tasks included in our paper) can be downloaded from [Google Drive](https://drive.google.com/file/d/1RdVCGfNVXYPhfP98ZsDRlCK4Ul29sVoq/view?usp=sharing) and [Baidu Drive (access code:by3d)](https://pan.baidu.com/s/1VJ0vddH8NMwFK2anOTTjrQ).
+The trained weights in step 3 (with 4 tasks included in our paper) can be downloaded from [Google Drive](https://drive.google.com/file/d/1RdVCGfNVXYPhfP98ZsDRlCK4Ul29sVoq/view?usp=sharing) and [Baidu Drive (access code: by3d)](https://pan.baidu.com/s/1VJ0vddH8NMwFK2anOTTjrQ).
 
 
 ## Training
