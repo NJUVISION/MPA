@@ -10,8 +10,8 @@ Image coding for multi-task applications, catering to both human perception and 
 
 ## TODO List
 This repository is still under active construction:
-- [ ] Release training and testing codes (in progress)
-- [ ] Release pretrained models
+- [x] Release training and testing codes
+- [ ] Release pretrained models (in progress)
 - [ ] Release visualization tools
 
 

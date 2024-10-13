@@ -65,7 +65,7 @@ model_architectures = {
     "mbt2018": JointAutoregressiveHierarchicalPriors,
     "cheng2020-anchor": Cheng2020Anchor,
     "cheng2020-attn": Cheng2020Attention,
-    "dpca_enc": MPAEnc,
+    "mpa_enc": MPAEnc,
     "mpa": MPA,
 }
 
@@ -459,7 +459,7 @@ def mpa_enc(quality, metric="mse", pretrained=False, progress=True, **kwargs):
     if quality < 1 or quality > 8:
         raise ValueError(f'Invalid quality "{quality}", should be between (1, 8)')
 
-    return _load_model("dpca_enc", metric, quality, pretrained, progress, **kwargs)
+    return _load_model("mpa_enc", metric, quality, pretrained, progress, **kwargs)
 
 
 def mpa(quality, metric="mse", pretrained=False, progress=True, **kwargs):
