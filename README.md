@@ -85,7 +85,12 @@ If you find our work useful in your research, please consider citing:
 @inproceedings{zhang2024allinone,
     author = {Zhang, Xu and Guo, Peiyao and Lu, Ming and Ma, Zhan},
     booktitle = {Advances in Neural Information Processing Systems},
+    editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+    pages = {71465--71503},
+    publisher = {Curran Associates, Inc.},
     title = {All-in-One Image Coding for Joint Human-Machine Vision with Multi-Path Aggregation},
+    url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/8395fdf356059eaa92afd39e3952a677-Paper-Conference.pdf},
+    volume = {37},
     year = {2024}
 }
 ```
