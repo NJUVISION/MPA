@@ -621,7 +621,8 @@ class NSABlock(nn.Module):
         self.norm1 = norm_layer(dim)
         self.attn = NeighborhoodAttention2D(
             dim, kernel_size=kernel_size, num_heads=num_heads,
-            qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop)
+            qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop,
+            rel_pos_bias=True)
 
         self.drop_path = DropPath(drop_path) if drop_path > 0. else nn.Identity()
         self.norm2 = norm_layer(dim)
@@ -672,7 +673,8 @@ class AdaNSABlock(nn.Module):
         self.norm1 = norm_layer(dim)
         self.attn = NeighborhoodAttention2D(
             dim, kernel_size=kernel_size, num_heads=num_heads,
-            qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop)
+            qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop,
+            rel_pos_bias=True)
 
         self.drop_path = DropPath(drop_path) if drop_path > 0. else nn.Identity()
         self.norm2 = norm_layer(dim)

@@ -503,11 +503,11 @@ def main(argv):
         logging.info("Loading "+str(args.pretrained))
         try:
             pretrained = torch.load(args.pretrained, map_location=device)["state_dict"]
-            net.load_state_dict(pretrained, strict=False)
+            logging.info(net.load_state_dict(pretrained, strict=False))
             net.update(force=True)
         except KeyError:
             pretrained = torch.load(args.pretrained, map_location=device)
-            net.load_state_dict(pretrained, strict=False)
+            logging.info(net.load_state_dict(pretrained, strict=False))
 
     macs, params = get_model_complexity_info(net.eval(), (3, 256, 256), as_strings=False, print_per_layer_stat=False)
     logging.info("MACs/pixel:"+str(macs/(256**2)))

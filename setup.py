@@ -138,7 +138,7 @@ setup(
         "pytorch-msssim",
         "timm==0.6.11",
         "ninja",
-        "natten",
+        "natten>=0.17",
         "opencv-python",
         "ptflops",
         "fvcore",

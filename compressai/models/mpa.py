@@ -644,7 +644,7 @@ class MPA(nn.Module):
             ["_quantized_cdf", "_offset", "_cdf_length", "scale_table"],
             state_dict,
         )
-        super().load_state_dict(state_dict, strict=strict)
+        return super().load_state_dict(state_dict, strict=strict)
 
     @classmethod
     def from_state_dict(cls, state_dict):
