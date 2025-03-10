@@ -1,4 +1,12 @@
-# [NeurIPS 2024] All-in-One Image Coding for Joint Human-Machine Vision with Multi-Path Aggregation
+# \[NeurIPS 2024\] All-in-One Image Coding for Joint Human-Machine Vision with Multi-Path Aggregation
+
+
+## Important Update [3/11/2025]
+If you have previously pulled our repository, please update to the latest version immediately to fix a critical bug caused by the `natten` version.
+
+We have updated the natten version requirement to `natten>=0.17` and explicitly set `rel_pos_bias=True` in `NeighborhoodAttention2D` within [layers.py](https://github.com/NJUVISION/MPA/blob/main/compressai/layers/layers.py) to maintain consistency with the previous behavior of natten (which now defaults to `False` in the new version).
+
+This discrepancy can significantly affect the quality of reconstructed images and task results when using our provided weights. Please pull the latest updates to ensure correct experimental reproduction.
 
 
 ## Introduction
