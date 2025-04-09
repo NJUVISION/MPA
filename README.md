@@ -33,7 +33,7 @@ pip install -U pip && pip install -e .
 
 
 ## Pretrained Models
-The trained weights in step 3 (with 4 tasks included in our paper) can be downloaded from [Google Drive](https://drive.google.com/file/d/1RdVCGfNVXYPhfP98ZsDRlCK4Ul29sVoq/view?usp=sharing) and [Baidu Drive (access code: by3d)](https://pan.baidu.com/s/1VJ0vddH8NMwFK2anOTTjrQ).
+The trained weights after each step can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1Bu4WAluBfFPEBU_oiIPVbvSzj4fT8yxh?usp=sharing) and [Baidu Drive (access code: by3d)](https://pan.baidu.com/s/1VJ0vddH8NMwFK2anOTTjrQ).
 
 
 ## Training
