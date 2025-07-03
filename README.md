@@ -108,3 +108,8 @@ If you find our work useful in your research, please consider citing:
 
 ## Acknowledgements
 Our code is based on [TinyLIC](https://github.com/lumingzzz/TinyLIC), [CompressAI](https://github.com/InterDigitalInc/CompressAI), [NATTEN](https://github.com/SHI-Labs/NATTEN), [DynamicViT](https://github.com/raoyongming/DynamicViT), [pytorch-image-models](https://github.com/rwightman/pytorch-image-models), [ConvNeXt](https://github.com/facebookresearch/ConvNeXt), [Swin-Transformer](https://github.com/microsoft/Swin-Transformer) and [PSPNet](https://github.com/hszhao/semseg). We would like to acknowledge the valuable contributions of the authors for their outstanding works and the availability of their open-source codes, which significantly benefited our work.
+
+
+If you're interested in visual coding for machine, you can check out the following work from us:
+
+- [\[ICME 2025 (Oral)\] Perception-Oriented Latent Coding for High-Performance Compressed Domain Semantic Inference](https://github.com/NJUVISION/POLC)
