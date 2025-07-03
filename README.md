@@ -26,6 +26,8 @@ This repository is still under active construction:
 ## Preparation
 The experiments were conducted on a single NVIDIA RTX 3090 with PyTorch 2.2.1, CUDA 11.8 and CuDNN8 (in the [docker environment](https://hub.docker.com/layers/pytorch/pytorch/2.2.1-cuda11.8-cudnn8-devel/images/sha256-5a0af47e17cb894f2654ee5bca6b88e795073bc72bd3d3890a843da4d1e04436?context=explore)). Create the environment, clone the project and then run the following code to complete the setup:
 ```bash
+apt update
+apt install libgl1-mesa-dev ffmpeg libsm6 libxext6 # for opencv-python
 git clone https://github.com/NJUVISION/MPA.git
 cd MPA
 pip install -U pip && pip install -e .
