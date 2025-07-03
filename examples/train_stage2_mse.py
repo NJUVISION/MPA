@@ -223,12 +223,12 @@ def test_epoch(epoch, test_dataloader, model, criterion, args):
                 rd_loss = out_criterion["mse_loss"] / 100 + out_criterion["bpp_loss"] * lambda_rd
                 egd_loss = rd_loss
 
-                ratio.update(compute_ratio(out_net["decisions"]))
-                aux_loss.update(model.aux_loss())
-                bpp_loss.update(out_criterion["bpp_loss"])
-                mse_loss.update(out_criterion["mse_loss"])
-                lpips_loss.update(out_criterion["lpips"])
-                loss.update(egd_loss)
+                ratio.update(compute_ratio(out_net["decisions"]), d.size(0))
+                aux_loss.update(model.aux_loss(), d.size(0))
+                bpp_loss.update(out_criterion["bpp_loss"], d.size(0))
+                mse_loss.update(out_criterion["mse_loss"], d.size(0))
+                lpips_loss.update(out_criterion["lpips"], d.size(0))
+                loss.update(egd_loss, d.size(0))
                 
 
         logging.info(

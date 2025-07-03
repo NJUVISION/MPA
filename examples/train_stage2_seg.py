@@ -307,13 +307,13 @@ def test_epoch(epoch, test_dataloader, model, seg_model, seg_transforms, rd_crit
                 rd_loss = out_rd_criterion["bpp_loss"] * lambda_rd + out_rd_criterion["mse_loss"] / 100
                 egd_loss = rd_loss + lambda_perc * out_rd_criterion["lpips"] * lambda_gan + acc * lambda_acc
 
-                loss.update(egd_loss)
-                bpp_loss.update(out_rd_criterion["bpp_loss"])
-                mse_loss.update(out_rd_criterion["mse_loss"])
-                lpips_loss.update(out_rd_criterion["lpips"])
-                acc_loss.update(acc)
-                aux_loss.update(model.aux_loss())
-                ratio.update(compute_ratio(out_net["decisions"]))
+                loss.update(egd_loss, images.size(0))
+                bpp_loss.update(out_rd_criterion["bpp_loss"], images.size(0))
+                mse_loss.update(out_rd_criterion["mse_loss"], images.size(0))
+                lpips_loss.update(out_rd_criterion["lpips"], images.size(0))
+                acc_loss.update(acc, images.size(0))
+                aux_loss.update(model.aux_loss(), images.size(0))
+                ratio.update(compute_ratio(out_net["decisions"]), images.size(0))
 
         iou_class = intersection_meter.sum / (union_meter.sum + 1e-10)
         accuracy_class = intersection_meter.sum / (target_meter.sum + 1e-10)

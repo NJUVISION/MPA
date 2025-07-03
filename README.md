@@ -4,7 +4,7 @@
 ## Important Update [3/11/2025]
 If you have previously pulled our repository, please update to the latest version immediately to fix a critical bug caused by the `natten` version.
 
-We have updated the natten version requirement to `natten>=0.17` and explicitly set `rel_pos_bias=True` in `NeighborhoodAttention2D` within [layers.py](https://github.com/NJUVISION/MPA/blob/main/compressai/layers/layers.py) to maintain consistency with the previous behavior of natten (which now defaults to `False` in the new version).
+We have updated the natten version requirement to `natten>=0.17.0,<=0.17.5` and explicitly set `rel_pos_bias=True` in `NeighborhoodAttention2D` within [layers.py](https://github.com/NJUVISION/MPA/blob/main/compressai/layers/layers.py) to maintain consistency with the previous behavior of natten (which defaults to `False` since `0.17.0` and is dropped after `0.17.5`).
 
 This discrepancy can significantly affect the quality of reconstructed images and task results when using our provided weights. Please pull the latest updates to ensure correct experimental reproduction.
 
@@ -20,7 +20,7 @@ Image coding for multi-task applications, catering to both human perception and 
 This repository is still under active construction:
 - [x] Release training and testing codes
 - [x] Release pretrained models
-- [ ] Release visualization tools (in progress)
+- [x] Release visualization tools (placed in `./notebooks`)
 
 
 ## Preparation
@@ -33,7 +33,7 @@ pip install -U pip && pip install -e .
 
 
 ## Pretrained Models
-The trained weights after each step can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1Bu4WAluBfFPEBU_oiIPVbvSzj4fT8yxh?usp=sharing) and [Baidu Drive (access code: by3d)](https://pan.baidu.com/s/1VJ0vddH8NMwFK2anOTTjrQ).
+The trained weights after each step can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1H8n6z-PBLwIB6fnVRS2syT0KrLzZihiG?usp=share_link) and [Baidu Drive (access code: y1cs)](https://pan.baidu.com/s/1YfcjK_KR90R1_lVejvYr8A).
 
 
 ## Training

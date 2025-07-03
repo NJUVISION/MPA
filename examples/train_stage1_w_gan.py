@@ -274,14 +274,14 @@ def test_epoch(epoch, test_dataloader, model, model_disc, criterion):
                 rd_loss = out_criterion["bpp_loss"] * lambda_rd + out_criterion["mse_loss"] / 100
                 egd_loss = rd_loss + (G_loss + lambda_perc * out_criterion["lpips"]) * lambda_gan
 
-                ratio.update(compute_ratio(out_net["decisions"]))
-                aux_loss.update(model.aux_loss())
-                bpp_loss.update(out_criterion["bpp_loss"])
-                mse_loss.update(out_criterion["mse_loss"])
-                lpips_loss.update(out_criterion["lpips"])
-                g_loss.update(G_loss)
-                d_loss.update(D_loss)
-                loss.update(egd_loss)
+                ratio.update(compute_ratio(out_net["decisions"]), d.size(0))
+                aux_loss.update(model.aux_loss(), d.size(0))
+                bpp_loss.update(out_criterion["bpp_loss"], d.size(0))
+                mse_loss.update(out_criterion["mse_loss"], d.size(0))
+                lpips_loss.update(out_criterion["lpips"], d.size(0))
+                g_loss.update(G_loss, d.size(0))
+                d_loss.update(D_loss, d.size(0))
+                loss.update(egd_loss, d.size(0))
                 
 
         logging.info(
@@ -329,7 +329,7 @@ def parse_args(argv):
     parser.add_argument(
         "-m",
         "--model",
-        default="dpca_enc",
+        default="mpa_enc",
         choices=image_models.keys(),
         help="Model architecture (default: %(default)s)",
     )
