@@ -351,8 +351,8 @@ def parse_args(argv):
     )
     parser.add_argument(
         "--cls_model",
-        default="convnext_tiny",
-        choices=["convnext_tiny", "swinv2_tiny_window8_256", "tv_resnet50"],
+        default="convnext_tiny.fb_in1k",
+        choices=["convnext_tiny.fb_in1k", "swinv2_tiny_window8_256.ms_in1k", "resnet50.tv_in1k"],
         help="CLS Model architecture (default: %(default)s)",
     )
 

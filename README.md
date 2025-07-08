@@ -84,7 +84,7 @@ python -m compressai.utils.eval_var_model checkpoint /path/to/dataset/ -a mpa -p
 
 An example to evaluate classification performance:
 ```bash
-python examples/eval_cls_real_bpp.py -m mpa --task_idx 1 --cls_model convnext_tiny -d /path/to/imagenet-1k/ --test_batch_size 16 --cuda --save --pretrained ./path/to/step3/checkpoint.pth.tar --q_task 8 --real_bpp
+python examples/eval_cls_real_bpp.py -m mpa --task_idx 1 --cls_model convnext_tiny.fb_in1k -d /path/to/imagenet-1k/ --test_batch_size 16 --cuda --save --pretrained ./path/to/step3/checkpoint.pth.tar --q_task 8 --real_bpp
 ```
 
 An example to evaluate semantic segmentation performance:
