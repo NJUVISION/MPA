@@ -24,14 +24,18 @@ This repository is still under active construction:
 
 
 ## Preparation
-The experiments were conducted on a single NVIDIA RTX 3090 with PyTorch 2.2.1, CUDA 11.8 and CuDNN8 (in the [docker environment](https://hub.docker.com/layers/pytorch/pytorch/2.2.1-cuda11.8-cudnn8-devel/images/sha256-5a0af47e17cb894f2654ee5bca6b88e795073bc72bd3d3890a843da4d1e04436?context=explore)). Create the environment, clone the project and then run the following code to complete the setup:
+The experiments were conducted on a single NVIDIA RTX 3090 with PyTorch 2.2.1, CUDA 11.8 and CuDNN8 (in the [docker environment](https://hub.docker.com/layers/pytorch/pytorch/2.2.1-cuda11.8-cudnn8-devel/images/sha256-5a0af47e17cb894f2654ee5bca6b88e795073bc72bd3d3890a843da4d1e04436?context=explore)). **Recommend to use [PyTorch 2.6.0](https://hub.docker.com/layers/pytorch/pytorch/2.6.0-cuda12.6-cudnn9-devel/images/sha256-faa67ebc9c9733bf35b7dae3f8640f5b4560fd7f2e43c72984658d63625e4487) to support natten 0.17.5.** Create the environment, clone the project and then run the following code to complete the setup:
 ```bash
 apt update
 apt install libgl1-mesa-dev ffmpeg libsm6 libxext6 # for opencv-python
 git clone https://github.com/NJUVISION/MPA.git
 cd MPA
-pip install -U pip && pip install -e .
+pip install -U pip
+pip install natten==0.17.5+torch260cu126 -f https://whl.natten.org
+pip install -e .
 ```
+
+For datasets, please follow [TinyLIC](https://github.com/lumingzzz/TinyLIC.git), [ConvNeXt](https://github.com/facebookresearch/ConvNeXt) and [PSPNet](https://github.com/hszhao/semseg) to prepare [Flicker2W](https://github.com/liujiaheng/CompressionData), [ImageNet-1K](http://image-net.org/) and [ADE20K](https://ade20k.csail.mit.edu).
 
 
 ## Pretrained Models
